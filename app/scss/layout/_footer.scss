@@ -1,0 +1,117 @@
+.footer {
+    margin-top: 118px;
+    // &__top{}
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        .footer__logo {
+            width: 20%;
+            .logo-box {
+                margin-bottom: 59px;
+                @include breakpoint(ipad-max) {
+                    margin-bottom: 25px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                font-family: $Poppins-Light;
+                color: $base-color;
+                margin-bottom: 65px;
+                @include breakpoint(ipad-max) {
+                    @include fontSize(12px);
+                    margin-bottom: 25px;
+                }
+            }
+            .ups-footer-social-lists {
+                display: flex;
+                margin-bottom: 1rem;
+                li {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    @include breakpoint(ipad-max) {
+                        margin-left: 4px;
+                        margin-right: 4px;
+                    }
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    a {
+                        @include transition();
+                        &:hover {
+                            span {
+                                &::before {
+                                    color: $links-hover-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer__lists {
+            width: 80%;
+            display: flex;
+            // justify-content: space-around;
+            .footer__lists-box {
+                border-right: 1px dotted $base-color;
+                padding-right: 30px;
+                padding-left: 30px;
+                width: 20%;
+                @include breakpoint(ipad-max) {
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+                .caption-title {
+                    margin-bottom: 38px;
+                    font-family: $Poppins-SemiBold;
+                    @include fontSize(26px);
+                    color: $base-color;
+                    font-weight: 600;
+                    @include breakpoint(medium-large-desktop-max) {
+                        @include fontSize(20px);
+                        max-height: 75px;
+                        height: 100%;
+                        margin-bottom: 15px;
+                    }
+                    @include breakpoint(desktop-max) {
+                        @include fontSize(20px);
+                        max-height: 75px;
+                        height: 100%;
+                        margin-bottom: 15px;
+                    }
+                    @include breakpoint(ipad-max) {
+                        @include fontSize(16px);
+                        max-height: 53px;
+                        height: 100%;
+                        margin-bottom: 15px;
+                    }
+                }
+                .ups-footer-common-lists {
+                    li {
+                        width: 100%;
+                        margin-bottom: 29px;
+                        a {
+                            @include fontSize(18px);
+                            color: $base-color;
+                            @include transition();
+                            @include breakpoint(desktop-max) {
+                                @include fontSize(14px);
+                            }
+                            @include breakpoint(ipad-max) {
+                                @include fontSize(11px);
+                            }
+                            &:hover {
+                                color: $links-hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: '';
+    src: url('KozGoPro-ExtraLight-AlphaNum.eot');
+    src: url('KozGoPro-ExtraLight-AlphaNum.eot?#iefix') format('embedded-opentype'),
+        url('KozGoPro-ExtraLight-AlphaNum.woff2') format('woff2'),
+        url('KozGoPro-ExtraLight-AlphaNum.woff') format('woff'),
+        url('KozGoPro-ExtraLight-AlphaNum.ttf') format('truetype'),
+        url('KozGoPro-ExtraLight-AlphaNum.svg#KozGoPro-ExtraLight-AlphaNum') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
