@@ -1,0 +1,19 @@
+.primary-btn {
+    padding: 14px 10px 14px 44px;
+    color: $text-white;
+    background-color: #F43535;
+    @include fontSize(30px);
+    font-family: $Poppins-SemiBold;
+    font-weight: 600;
+    border: 1px solid transparent;
+    display: inline-block;
+    @include transition();
+    @include breakpoint(mobile-max) {
+        padding: 5px 10px 8px 10px;
+        @include fontSize(16px);
+    }
+    &:hover {
+        color: #F43535;
+        background-color: $text-white;
+    }
+}

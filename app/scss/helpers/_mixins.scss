@@ -56,6 +56,19 @@ $breakpoints: ( 'custom-small-mobile-max': (max-width: 359px), 'portrait-mobile-
     transition: $what $time $how;
 }
 
+@mixin form-control-footer {
+    background-color: $base-color !important;
+    border-bottom: 1px solid #A7A7A7 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    color: $text-white !important;
+    padding: 5px 5px 14px 0px !important;
+    @include input-placeholder {
+        color: $text-white !important;
+    }
+}
+
 // rgba Border
 @mixin border-rgba ($color, $opacity) {
     border: 1px solid rgba(red($color), green($color), blue($color), $opacity);

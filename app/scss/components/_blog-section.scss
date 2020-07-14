@@ -1,0 +1,96 @@
+.blog-section {
+    &__top {
+        .blog-title {
+            color: $base-bg-secondary;
+            font-family: $Poppins-Medium;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 14px;
+            @include fontSize(30px);
+        }
+        .blog-subtitle {
+            color: $base-color;
+            font-family: $Poppins-Extra-light;
+            font-weight: 200;
+            text-align: center;
+            @include fontSize(50px);
+            @include breakpoint(ipad-max) {
+                @include fontSize(30px);
+            }
+            @include breakpoint(mobile-max) {
+                @include fontSize(14px);
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        justify-content: space-between;
+        @include breakpoint(mobile-max) {
+            flex-wrap: wrap;
+        }
+        .blog-section__blog {
+            max-width: 390px;
+            width: 100%;
+            box-shadow: 0px 8px 20px #0000000F;
+            opacity: 1;
+            margin-right: 54px;
+            @include breakpoint(medium-large-desktop-max) {
+                max-width: 280px;
+            }
+            @include breakpoint(desktop-max) {
+                max-width: 201px;
+            }
+            @include breakpoint(ipad-max) {
+                margin-right: 35px;
+                max-width: 196px;
+            }
+            @include breakpoint(mobile-max) {
+                margin-right: 0px;
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+            &:last-child {
+                margin-right: 0px;
+            }
+            .blog-img {
+                a {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .blog-info {
+                padding: 34px 44px 20px 31px;
+                background-color: $text-white;
+                color: $base-color;
+                @include breakpoint(medium-large-desktop-max) {
+                    padding: 34px 20px 20px 20px;
+                }
+                h2 {
+                    font-family: $Poppins-Light;
+                    font-weight: 300;
+                    @include fontSize(22px);
+                    margin-bottom: 33px;
+                    @include breakpoint(medium-large-desktop-max) {
+                        @include fontSize(14px);
+                    }
+                    @include breakpoint(ipad-max) {
+                        @include fontSize(12px);
+                    }
+                }
+                p {
+                    a {
+                        text-decoration: none;
+                        color: $base-color;
+                        @include transition();
+                        &:hover {
+                            color: $base-bg-secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
