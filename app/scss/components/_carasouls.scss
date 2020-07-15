@@ -1,0 +1,184 @@
+//Banner Carousel Start here
+.header-carousel {
+    &__bg {
+        // background-image: url("../images/slider-first.jpg");
+        // background-repeat: no-repeat;
+        // background-size: 100% 100%;
+        background-color: $base-bg-color;
+        height: auto;
+    }
+    &__slider {}
+}
+
+.banner-carousel__content {
+    display: flex;
+    @include breakpoint(mobile-max) {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+}
+
+.banner-carousel__content-left {
+    // padding-left: 111px;
+    max-width: 700px;
+    width: 40%;
+    padding-bottom: 177px;
+    padding-top: 200px;
+    @include breakpoint(medium-large-desktop-max) {
+        max-width: 700px;
+    }
+    @include breakpoint(desktop-max) {
+        max-width: 600px;
+        padding-top: 100px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include breakpoint(ipad-max) {
+        max-width: 445px;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+    @include breakpoint(mobile-max) {
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 32px;
+        padding-top: 32px;
+    }
+}
+
+.banner-carousel__content-right {
+    width: 60%;
+    @include breakpoint(mobile-max) {
+        width: 100%;
+        max-width: 100%;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.carousel-caption-title {
+    font-family: $Poppins-Light;
+    font-weight: 300;
+    @include fontSize(35px);
+    color: $base-color;
+    @include breakpoint(medium-large-desktop-max) {
+        @include fontSize(25px);
+    }
+    @include breakpoint(desktop-max) {
+        @include fontSize(20px);
+    }
+    @include breakpoint(ipad-max) {
+        @include fontSize(16px);
+    }
+    @include breakpoint(mobile-max) {
+        margin-bottom: 1rem;
+    }
+}
+
+.carousel-caption-subtitle {
+    font-family: $Poppins-SemiBold;
+    font-weight: 600;
+    @include fontSize(80px);
+    color: $base-color;
+    @include breakpoint(medium-large-desktop-max) {
+        @include fontSize(64px);
+    }
+    @include breakpoint(desktop-max) {
+        @include fontSize(48px);
+    }
+    @include breakpoint(ipad-max) {
+        @include fontSize(32px);
+    }
+    @include breakpoint(mobile-max) {
+        @include fontSize(32px);
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+}
+
+.carousel-para-info {
+    font-family: $Poppins-Light;
+    font-weight: 300;
+    @include fontSize(22px);
+    color: $base-color;
+    margin-bottom: 46px;
+    @include breakpoint(mobile-max) {
+        margin-bottom: 1rem;
+    }
+}
+
+.view-all-services {
+    border: 2px solid #70707080;
+    background-color: transparent;
+    color: $base-color;
+    padding-right: 33px;
+    @include breakpoint(desktop-max) {
+        @include fontSize(16px);
+    }
+    @include breakpoint(ipad-max) {
+        @include fontSize(14px);
+    }
+    @include breakpoint(ipad-max) {
+        @include fontSize(10px);
+    }
+    span {
+        vertical-align: middle;
+    }
+}
+
+#banner-carousel {
+    .owl-dots {
+        position: absolute !important;
+        bottom: 10% !important;
+        right: 20% !important;
+        @include breakpoint(mobile-max) {
+            bottom: 0% !important;
+            right: 10% !important;
+        }
+        .owl-dot {
+            span {
+                width: 52px !important;
+                height: 3px !important;
+            }
+        }
+    }
+}
+
+//Banner Carousel Ends here
+//Client Carousel Start here
+#client-carousel {}
+
+.client-carousel__content {
+    max-width: 530px;
+    min-height: 260px;
+    max-height: 260px;
+    height: 100%;
+    width: 100%;
+    background-color: $text-white;
+    color: $base-color;
+    padding: 45px 53px 38px 35px;
+    overflow: hidden;
+    @include breakpoint(desktop-max) {
+        padding: 20px;
+    }
+    @include breakpoint(iapd-max) {
+        padding: 15px;
+        max-width: 650px;
+    }
+    .client-carousel-title {
+        font-family: $Poppins-Medium;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    .client-carousel-info {
+        font-family: $Poppins-Light;
+        font-weight: 300;
+        @include breakpoint(mobile-max) {
+            @include fontSize(11px);
+        }
+    }
+}
+
+//Client Carousel Ends here..
