@@ -1,19 +1,19 @@
 .blog-section {
     &__top {
         .blog-title {
-            color: $base-bg-secondary;
-            font-family: $Poppins-Medium;
-            font-weight: 500;
-            text-align: center;
-            margin-bottom: 14px;
-            @include fontSize(30px);
+            // color: $base-bg-secondary;
+            // font-family: $Poppins-Medium;
+            // font-weight: 500;
+            // text-align: center;
+            // margin-bottom: 14px;
+            // @include fontSize(30px);
         }
         .blog-subtitle {
-            color: $base-color;
-            font-family: $Poppins-Extra-light;
-            font-weight: 200;
-            text-align: center;
-            @include fontSize(50px);
+            // color: $base-color;
+            // font-family: $Poppins-Extra-light;
+            // font-weight: 200;
+            // text-align: center;
+            // @include fontSize(50px);
             @include breakpoint(ipad-max) {
                 @include fontSize(30px);
             }

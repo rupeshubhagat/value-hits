@@ -163,7 +163,7 @@
     @include breakpoint(desktop-max) {
         padding: 20px;
     }
-    @include breakpoint(iapd-max) {
+    @include breakpoint(ipad-max) {
         padding: 15px;
         max-width: 650px;
     }

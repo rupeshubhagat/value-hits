@@ -1,12 +1,13 @@
-// $(document).ready(function() {
-//     // jQuery methods go here...
-//     $(document).resize(function() {
-//         var screen = $(window);
-
-//         if (screen.width < 768) {
-//             $(".style-change").removeClass("style-change");
-//             $(".style-change").addClass("--common-style-top");
-//         }
-//     });
-
-// });
+$(document).ready(function() {
+    $(function() {
+        $('.after-seo-btn').addClass('active-btn');
+    });
+    $(".before-seo-btn").click(function() {
+        $(".before-seo-btn").addClass("active-btn");
+        $(".after-seo-btn").removeClass("active-btn");
+    });
+    $(".after-seo-btn").click(function() {
+        $(".after-seo-btn").addClass("active-btn");
+        $(".before-seo-btn").removeClass("active-btn");
+    });
+});

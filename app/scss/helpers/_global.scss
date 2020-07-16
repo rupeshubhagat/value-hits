@@ -7,3 +7,23 @@
     color: #DA4CC0 !important;
     transition: all 0.5s ease;
 }
+
+.caption-title-common {
+    color: $base-bg-secondary;
+    text-align: center;
+    font-family: $Poppins-Medium;
+    font-weight: 500;
+    @include fontSize(30px);
+}
+
+.caption-subtitle-common {
+    color: $base-color;
+    text-align: center;
+    font-family: $Poppins-Extra-light;
+    font-weight: 200;
+    @include fontSize(50px);
+    margin-bottom: 30px;
+    @include breakpoint(ipad-max) {
+        @include fontSize(27px);
+    }
+}

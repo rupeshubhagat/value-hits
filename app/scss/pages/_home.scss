@@ -1,127 +1,448 @@
-.client {
-    &__top {
-        display: flex;
-        // justify-content: center;
-        align-items: center;
-        @include breakpoint(mobile-max) {
-            flex-wrap: wrap;
-        }
-        .client__top-left {
-            max-width: 445px;
-            width: 35%;
+    .client {
+        &__top {
             display: flex;
-            justify-content: center;
+            // justify-content: center;
             align-items: center;
-            background-color: $base-color;
-            color: $text-white;
-            font-family: $Poppins-SemiBold;
-            font-weight: 600;
-            padding: 42px 72px 42px 69px;
-            @include fontSize(44px);
-            @include breakpoint(desktop-max) {
-                max-width: none;
-                padding: 42px 20px 42px 20px;
-                @include fontSize(28px);
-            }
-            @include breakpoint(ipad-max) {
-                // max-width: 157px;
-                padding: 25px 4px 25px 5px;
-                @include fontSize(16px);
-            }
             @include breakpoint(mobile-max) {
-                width: 100%;
+                flex-wrap: wrap;
             }
-        }
-        .client__top-right {
-            width: 65%;
-            @include breakpoint(mobile-max) {
-                width: 100%;
-            }
-            .ups-list-clients {
+            .client__top-left {
+                max-width: 445px;
+                width: 35%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $base-color;
+                color: $text-white;
+                font-family: $Poppins-SemiBold;
+                font-weight: 600;
+                padding: 42px 72px 42px 69px;
+                @include fontSize(44px);
+                @include breakpoint(desktop-max) {
+                    max-width: none;
+                    padding: 42px 20px 42px 20px;
+                    @include fontSize(28px);
+                }
+                @include breakpoint(ipad-max) {
+                    // max-width: 157px;
+                    padding: 25px 4px 25px 5px;
+                    @include fontSize(16px);
+                }
                 @include breakpoint(mobile-max) {
                     width: 100%;
-                    flex-wrap: wrap !important;
                 }
-                li {
-                    max-width: 150px;
-                    max-height: 35px;
+            }
+            .client__top-right {
+                width: 65%;
+                @include breakpoint(mobile-max) {
                     width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-right: 10px;
+                }
+                .ups-list-clients {
                     @include breakpoint(mobile-max) {
-                        width: 40%;
-                        max-width: none !important;
-                        flex-wrap: wrap;
-                        margin-right: 5px;
-                        max-height: 100px;
-                        margin-bottom: 1rem;
-                        margin-top: 1rem;
+                        width: 100%;
+                        flex-wrap: wrap !important;
                     }
-                    &:last-child {
-                        margin-right: 0px;
-                    }
-                    @include breakpoint(desktop-max) {
-                        max-width: 90px;
-                        margin-right: 15px;
-                    }
-                    @include breakpoint(desktop-max) {
-                        max-width: 60px;
-                    }
-                    a {
-                        filter: grayscale(1);
-                        &:hover {
-                            filter: grayscale(0);
+                    li {
+                        max-width: 150px;
+                        max-height: 35px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 10px;
+                        @include breakpoint(mobile-max) {
+                            width: 40%;
+                            max-width: none !important;
+                            flex-wrap: wrap;
+                            margin-right: 5px;
+                            max-height: 100px;
+                            margin-bottom: 1rem;
+                            margin-top: 1rem;
                         }
-                        img {
+                        &:last-child {
+                            margin-right: 0px;
+                        }
+                        @include breakpoint(desktop-max) {
+                            max-width: 90px;
+                            margin-right: 15px;
+                        }
+                        @include breakpoint(desktop-max) {
+                            max-width: 60px;
+                        }
+                        a {
+                            filter: grayscale(1);
+                            &:hover {
+                                filter: grayscale(0);
+                            }
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__bottom {
+            background-image: url("../images/client/client-bottom-bg.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: auto;
+            padding: 100px 0px 126px 93px;
+            @include breakpoint(ipad-max) {
+                padding: 27px 0px 61px 27px;
+            }
+            @include breakpoint(mobile-max) {
+                padding: 16px 0px 44px 9px;
+            }
+            .client__bottom-top {
+                .client-title {
+                    font-family: $Poppins-SemiBold;
+                    font-weight: 600;
+                    @include fontSize(30px);
+                    color: $text-white;
+                    margin-bottom: 1rem;
+                    @include breakpoint(mobile-max) {
+                        text-align: center;
+                    }
+                }
+                .client-info {
+                    font-family: $Poppins-Extra-light;
+                    font-weight: 200;
+                    @include fontSize(50px);
+                    color: $text-white;
+                    margin-bottom: 94px;
+                    @include breakpoint(ipad-max) {
+                        @include fontSize(20px);
+                        color: #FFFFFF;
+                        margin-bottom: 35px;
+                    }
+                    @include breakpoint(mobile-max) {
+                        margin-bottom: 26px;
+                        @include fontSize(16px);
+                    }
+                }
+            }
+            .client__bottom-bottom {}
+        }
+    }
+    
+    .services {
+        .services-bg {
+            border-bottom: 1px solid $base-color;
+        }
+        &__top {
+            padding: 104px 0px;
+            max-width: 1468px;
+            margin: 0 auto;
+            h2 {
+                font-family: $Poppins-Extra-light;
+                font-weight: 200;
+                color: $base-color;
+                text-align: center;
+                @include fontSize(30px);
+            }
+        }
+        &__bottom {
+            display: flex;
+            .services-left {
+                width: 40%;
+                padding: 130px 20px 77px 135px;
+                .services-title {
+                    text-align: left !important;
+                    margin-bottom: 19px !important;
+                }
+                .services-subtitle {
+                    text-align: left !important;
+                }
+                .services-info {
+                    font-family: $Poppins-Light;
+                    font-weight: 300;
+                    color: $base-color;
+                    @include fontSize(22px);
+                }
+            }
+            .services-right {
+                width: 60%;
+                padding: 100px 0px 77px 0px;
+            }
+        }
+    }
+    
+    .industries {
+        &__top {
+            padding-top: 121px;
+            padding-bottom: 217px;
+            @include breakpoint(ipad-max) {
+                padding-top: 42px;
+            }
+            @include breakpoint(mobile-max) {
+                padding-bottom: 10px;
+            }
+            .industries__top-info {
+                // .industries-title {
+                //     color: $base-bg-secondary;
+                //     text-align: center;
+                //     font-family: $Poppins-Medium;
+                //     font-weight: 500;
+                //     @include fontSize(30px);
+                // }
+                // .industries-subtitle {
+                //     color: $base-color;
+                //     text-align: center;
+                //     font-family: $Poppins-Extra-light;
+                //     font-weight: 200;
+                //     @include fontSize(50px);
+                //     margin-bottom: 30px;
+                //     @include breakpoint(ipad-max) {
+                //         @include fontSize(27px);
+                //     }
+                // }
+            }
+        }
+        &__bottom {
+            background-image: url("../images/industries/industries-background.jpg");
+            background-repeat: no-repeat;
+            // background-size: 100% 100%;
+            background-size: cover;
+            height: auto;
+            opacity: 0.5;
+            // background-attachment:;
+            // filter: grayscale(0);
+            .industries__bottom-details {
+                opacity: 1;
+                // padding-bottom: 172px;
+                position: relative;
+                top: -214px;
+                @include breakpoint(mobile-max) {
+                    position: static;
+                    top: 0;
+                }
+                .industries-ups-lists {
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 20px 20px 60px 20px;
+                    box-shadow: 0px 10px 40px #00000029;
+                    background-color: $text-white;
+                    // margin-bottom: 172px;
+                    @include breakpoint(mobile-max) {
+                        padding: 20px 20px 24px 20px;
+                    }
+                    li {
+                        width: 25%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: inherit;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        padding: 20px 0px;
+                        border-right: 1px dotted $base-color;
+                        border-bottom: 1px dotted $base-color;
+                        &:nth-child(4n+0) {
+                            border-right: none;
+                            @include breakpoint(ipad-max) {
+                                border-right: none;
+                            }
+                        }
+                        &:nth-child(2n+0) {
+                            @include breakpoint(ipad-max) {
+                                border-right: none !important;
+                            }
+                        }
+                        &:nth-child(n+9) {
+                            border-bottom: none;
+                            @include breakpoint(ipad-max) {
+                                border-bottom: 1px dotted $base-color;
+                            }
+                        }
+                        &:nth-child(n+11) {
+                            @include breakpoint(ipad-max) {
+                                border-bottom: none !important;
+                            }
+                        }
+                        @include breakpoint(ipad-max) {
+                            width: 50%;
+                        }
+                        @include breakpoint(mobile-max) {
                             width: 100%;
+                            border: none !important;
+                            margin-bottom: 1rem;
+                            box-shadow: 2px 4px 6px $base-color;
+                        }
+                        .industries-icon-box {
+                            max-width: 64px;
+                            max-height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 51px;
+                            a {
+                                img {
+                                    width: 100%
+                                }
+                            }
+                        }
+                        .industries-icon-name {
+                            max-width: 235px;
+                            width: 100%;
+                            text-align: center;
+                            @include fontSize(22px);
+                            font-family: $Poppins-Medium;
+                            font-weight: 500;
+                            color: $base-color;
                         }
                     }
                 }
             }
         }
     }
-    &__bottom {
-        background-image: url("../images/client/client-bottom-bg.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        height: auto;
-        padding: 100px 0px 126px 93px;
-        @include breakpoint(ipad-max) {
-            padding: 27px 0px 61px 27px;
+    
+    .agencies {
+        .agencies-bg {
+            background-color: $base-bg-color;
         }
-        @include breakpoint(mobile-max) {
-            padding: 16px 0px 44px 9px;
-        }
-        .client__bottom-top {
-            .client-title {
-                font-family: $Poppins-SemiBold;
-                font-weight: 600;
-                @include fontSize(30px);
-                color: $text-white;
-                margin-bottom: 1rem;
+        &__top {
+            padding-top: 89px;
+            @include breakpoint(mobile-max) {
+                padding-top: 35px;
+            }
+            .agencies-title {
+                // font-family: $Poppins-Medium;
+                // color: $base-bg-secondary;
+                // font-weight: 500;
+                // @include fontSize(30px);
+                // text-align: center;
+                // margin-bottom: 21px;
                 @include breakpoint(mobile-max) {
-                    text-align: center;
+                    @include fontSize(21px);
                 }
             }
-            .client-info {
-                font-family: $Poppins-Extra-light;
-                font-weight: 200;
-                @include fontSize(50px);
-                color: $text-white;
-                margin-bottom: 94px;
+            .agencies-subtitle {
+                // font-family: $Poppins-Extra-light;
+                // color: $base-color;
+                // font-weight: 200;
+                // @include fontSize(50px);
+                // text-align: center;
                 @include breakpoint(ipad-max) {
-                    @include fontSize(20px);
-                    color: #FFFFFF;
-                    margin-bottom: 35px;
+                    @include fontSize(34px);
+                    margin-bottom: 1rem;
                 }
                 @include breakpoint(mobile-max) {
-                    margin-bottom: 26px;
                     @include fontSize(16px);
                 }
             }
+            .agencies-para-info {
+                font-family: $Poppins-Light;
+                color: $base-color;
+                font-weight: 300;
+                @include fontSize(22px);
+                text-align: center;
+                padding-bottom: 60px;
+                @include breakpoint(mobile-max) {
+                    @include fontSize(16px);
+                    padding-bottom: 9px;
+                }
+            }
         }
-        .client__bottom-bottom {}
+        &__bottom {
+            .switch-btn-agencies {
+                width: 427px;
+                margin: 0 auto;
+                background-color: #F43535;
+                border-radius: 55px;
+                padding: 13px 12px 13px 12px;
+                margin-bottom: 39px;
+                @include breakpoint(mobile-max) {
+                    width: 100%;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .before-seo-btn {
+                    padding: 13px 51px 12px 65px;
+                    background-color: transparent;
+                    border-radius: 30px;
+                    font-family: $Poppins-Medium;
+                    font-weight: 500;
+                    color: $text-white;
+                    border: 1px solid transparent;
+                    display: inline-block;
+                }
+                .after-seo-btn {
+                    padding: 13px 51px 12px 65px;
+                    background-color: transparent;
+                    border-radius: 30px;
+                    font-family: $Poppins-Medium;
+                    font-weight: 500;
+                    color: $text-white;
+                    border: 1px solid transparent;
+                    display: inline-block;
+                }
+                .active-btn {
+                    background-color: $text-white;
+                    color: $base-color;
+                }
+            }
+            .ups-agencies-lists {
+                display: flex;
+                justify-content: space-around;
+                padding-bottom: 155px;
+                @include breakpoint(ipad-max) {
+                    padding-bottom: 65px;
+                }
+                @include breakpoint(mobile-max) {
+                    flex-wrap: wrap;
+                }
+                li {
+                    width: 391px;
+                    background-color: rgba($text-white, 0.85);
+                    border-radius: 14px;
+                    box-shadow: 0px 10px 40px #0000000D;
+                    padding: 65px 65px 72px 48px;
+                    @include breakpoint(desktop-max) {
+                        width: 254px;
+                        padding: 25px 16px 25px 16px;
+                    }
+                    @include breakpoint(ipad-max) {
+                        width: 204px;
+                        padding: 25px 16px 25px 16px;
+                    }
+                    @include breakpoint(mobile-max) {
+                        width: 100%;
+                        padding: 25px 16px 25px 16px;
+                        margin-bottom: 1rem;
+                    }
+                    .agencies-count {
+                        font-family: $Poppins-Medium;
+                        font-weight: 500;
+                        color: $base-color;
+                        @include fontSize(75px);
+                        text-align: center;
+                        opacity: 1;
+                        margin-bottom: 10px;
+                        @include breakpoint(desktop-max) {
+                            @include fontSize(42px);
+                        }
+                        @include breakpoint(ipad-max) {
+                            @include fontSize(35px);
+                        }
+                    }
+                    .agencies-title {
+                        font-family: $Poppins-Extra-light;
+                        font-weight: 200;
+                        color: $base-color;
+                        @include fontSize(30px);
+                        text-align: center;
+                        opacity: 1;
+                        @include breakpoint(desktop-max) {
+                            @include fontSize(32px);
+                        }
+                        @include breakpoint(ipad-max) {
+                            @include fontSize(17px);
+                        }
+                    }
+                }
+            }
+        }
     }
-}
