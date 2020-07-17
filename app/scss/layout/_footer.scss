@@ -1,8 +1,8 @@
 .footer {
-    margin-top: 118px;
-    @include breakpoint(mobile-max) {
-        margin-top: 175px;
-    }
+    // margin-top: 118px;
+    // @include breakpoint(mobile-max) {
+    //     margin-top: 175px;
+    // }
     &__top {
         padding: 104px 96px 144px 106px;
         background-color: $base-color;

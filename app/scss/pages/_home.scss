@@ -1,3 +1,140 @@
+    .seo-quick-forms {
+        .seo-quick-forms-bg {
+            background-color: #F43535;
+        }
+        &__top {
+            // width: 90%;
+            // display: flex;
+            padding: 23px 0px;
+            @include breakpoint(ipad-max) {
+                padding: 15px 0px;
+            }
+            .audit-form {
+                .form-group {
+                    display: flex;
+                    justify-content: center;
+                    align-items: baseline;
+                    margin-bottom: 0px;
+                    @include breakpoint(mobile-max) {
+                        flex-direction: column;
+                        justify-content: flex-start;
+                    }
+                    .label-getstarted {
+                        font-family: $Poppins-SemiBold;
+                        font-family: 600;
+                        color: $text-white !important;
+                        @include fontSize(22px);
+                        margin-right: 80px;
+                        @include breakpoint(medium-large-desktop-max) {
+                            margin-right: 25px;
+                            @include fontSize(16px);
+                        }
+                        @include breakpoint(desktop-max) {
+                            margin-right: 15px;
+                            @include fontSize(14px);
+                        }
+                        @include breakpoint(ipad-max) {
+                            margin-right: 15px;
+                            @include fontSize(14px);
+                        }
+                        @include breakpoint(mobile-max) {
+                            width: 100%;
+                        }
+                    }
+                    .form-control {
+                        width: 53%;
+                        @include form-control-footer();
+                        background-color: transparent !important;
+                        border-bottom: 1px solid $text-white !important;
+                        @include breakpoint(desktop-max) {
+                            width: 44%;
+                        }
+                        @include breakpoint(ipad-max) {
+                            width: 44%;
+                        }
+                        @include breakpoint(mobile-max) {
+                            width: 100%;
+                        }
+                    }
+                    .get-audit-btn {
+                        background-color: #00000052;
+                        padding: 17px 70px 16px 70px;
+                        @include breakpoint(ipad-max) {
+                            padding: 14px 10px 12px 10px;
+                            @include fontSize(16px);
+                        }
+                        @include breakpoint(mobile-max) {
+                            margin: 0 auto;
+                            margin-top: 1rem;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+        &__free-quote {
+            background-color: #F43535;
+            padding: 38px;
+            .free-quote {
+                width: 100%;
+                display: flex;
+                align-items: baseline;
+                justify-content: center;
+                &__left {
+                    width: 80%;
+                    .form-group {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        margin-bottom: 0px;
+                        label {
+                            width: 100%;
+                            padding-left: 20px !important;
+                            @include fontSize(18px);
+                            span {
+                                color: $text-white !important;
+                                font-family: $Poppins-SemiBold;
+                                font-weight: 600;
+                            }
+                        }
+                        .form-control {
+                            width: 22%;
+                            @include form-control-footer();
+                            background-color: transparent !important;
+                            border-bottom: 1px solid $text-white !important;
+                        }
+                    }
+                }
+                &__right {
+                    width: 15%;
+                    .free-quote-btn {
+                        background-color: #00000052 !important;
+                        padding: 19px 40px 19px 39px !important;
+                        @include fontSize(22px);
+                    }
+                }
+            }
+        }
+        &__bottom {
+            padding: 104px 0px;
+            max-width: 1468px;
+            margin: 0 auto;
+            @include breakpoint(mobile-max) {
+                padding: 20px 0px;
+            }
+            h2 {
+                font-family: $Poppins-Extra-light;
+                font-weight: 200;
+                color: $base-color;
+                text-align: center;
+                @include fontSize(30px);
+                @include breakpoint(mobile-max) {
+                    @include fontSize(16px);
+                }
+            }
+        }
+    }
+    
     .client {
         &__top {
             display: flex;
@@ -131,28 +268,51 @@
             border-bottom: 1px solid $base-color;
         }
         &__top {
-            padding: 104px 0px;
-            max-width: 1468px;
-            margin: 0 auto;
-            h2 {
-                font-family: $Poppins-Extra-light;
-                font-weight: 200;
-                color: $base-color;
-                text-align: center;
-                @include fontSize(30px);
-            }
+            // padding: 104px 0px;
+            // max-width: 1468px;
+            // margin: 0 auto;
+            // @include breakpoint(mobile-max) {
+            //     padding: 20px 0px;
+            // }
+            // h2 {
+            //     font-family: $Poppins-Extra-light;
+            //     font-weight: 200;
+            //     color: $base-color;
+            //     text-align: center;
+            //     @include fontSize(30px);
+            //     @include breakpoint(mobile-max) {
+            //         @include fontSize(16px);
+            //     }
+            // }
         }
         &__bottom {
             display: flex;
+            @include breakpoint(mobile-max) {
+                width: 100%;
+                flex-direction: column;
+            }
             .services-left {
                 width: 40%;
                 padding: 130px 20px 77px 135px;
+                @include breakpoint(ipad-max) {
+                    padding: 37px 8px 37px 14px;
+                }
+                @include breakpoint(mobile-max) {
+                    width: 100%;
+                    padding-bottom: 0px;
+                }
                 .services-title {
                     text-align: left !important;
                     margin-bottom: 19px !important;
+                    @include breakpoint(mobile-max) {
+                        text-align: center !important;
+                    }
                 }
                 .services-subtitle {
                     text-align: left !important;
+                    @include breakpoint(mobile-max) {
+                        margin-bottom: 1rem;
+                    }
                 }
                 .services-info {
                     font-family: $Poppins-Light;
@@ -164,6 +324,13 @@
             .services-right {
                 width: 60%;
                 padding: 100px 0px 77px 0px;
+                @include breakpoint(ipad-max) {
+                    padding: 37px 8px 37px 8px;
+                }
+                @include breakpoint(mobile-max) {
+                    width: 100%;
+                    padding-top: 12px;
+                }
             }
         }
     }

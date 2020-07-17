@@ -51,6 +51,7 @@ $(document).ready(function() {
 
     $('#services-carousel').owlCarousel({
         loop: true,
+        dots: false,
         margin: 10,
         responsiveClass: true,
         autoplay: true,

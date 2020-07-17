@@ -1,5 +1,9 @@
 //Banner Carousel Start here
 .header-carousel {
+    margin-top: 118px;
+    @include breakpoint(mobile-max) {
+        margin-top: 175px;
+    }
     &__bg {
         // background-image: url("../images/slider-first.jpg");
         // background-repeat: no-repeat;
@@ -182,3 +186,58 @@
 }
 
 //Client Carousel Ends here..
+// services Carousel start hers..
+#services-carousel {}
+
+.services-carousel__content {
+    padding: 62px 92px 20px 41px;
+    box-shadow: 0px 10px 40px #00000048;
+    color: $text-white;
+    background-color: #383838;
+    @include breakpoint(ipad-max) {
+        padding: 37px 8px 37px 14px;
+    }
+}
+
+.--services-carousel__content--change {
+    background-color: #1D1D1D !important;
+}
+
+.services-carousel-subtitle {
+    color: $text-white !important;
+    margin-bottom: 51px;
+    text-align: left !important;
+    @include breakpoint(ipad-max) {
+        @include fontSize(20px);
+        margin-bottom: 16px;
+    }
+}
+
+.services-para-info {
+    color: $text-white;
+    @include fontSize(22px);
+    font-weight: $Poppins-Regular;
+    font-weight: 400;
+    margin-bottom: 78px;
+    @include breakpoint(ipad-max) {
+        @include fontSize(16px);
+        margin-bottom: 16px;
+    }
+}
+
+.more-services {
+    a {
+        text-decoration: none;
+        color: $text-white;
+        @include fontSize(32px);
+        @include transition();
+        &:hover {
+            color: $base-bg-secondary;
+        }
+        @include breakpoint(ipad-max) {
+            @include fontSize(16px);
+        }
+    }
+}
+
+// services Carousel ends heres..
