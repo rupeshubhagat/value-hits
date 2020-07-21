@@ -116,3 +116,27 @@ $breakpoints: ( 'custom-small-mobile-max': (max-width: 359px), 'portrait-mobile-
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+// seo button th bg:
+@mixin seo-th-bg {
+    background-color: #F43535;
+    border-top: none;
+    border-bottom: none;
+    padding: 0px 0px !important;
+}
+
+@mixin seo-btn-silver-gold-bronze {
+    background-color: $text-white;
+    padding: 26px 10px 31px 10px;
+    text-align: center;
+    display: block;
+    color: $base-color;
+}
+
+@mixin seo-btn-right-sign {
+    background-color: $text-white;
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+    display: block;
+    color: $base-color;
+}

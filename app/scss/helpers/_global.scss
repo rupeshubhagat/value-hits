@@ -27,3 +27,14 @@
         @include fontSize(27px);
     }
 }
+
+.margin-top {
+    margin-top: 118px;
+    @include breakpoint(mobile-max) {
+        margin-top: 175px;
+    }
+}
+
+.base-bg {
+    background-color: $base-bg-color;
+}

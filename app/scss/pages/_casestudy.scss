@@ -1,0 +1,17 @@
+.banner-casestudy-blogs {
+    // background-color: $base-bg-color;
+    &__top {
+        h1 {
+            padding-top: 20px;
+            font-family: $Poppins-SemiBold;
+            font-weight: bold;
+            padding-bottom: 180px;
+            @include fontSize(80px);
+        }
+    }
+}
+
+.position-rel-top {
+    position: relative;
+    top: -86px;
+}
