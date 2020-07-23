@@ -28,6 +28,17 @@
     }
 }
 
+.brief-desc {
+    color: $base-color;
+    text-align: left;
+    font-family: $Poppins-Light;
+    font-weight: 200;
+    @include fontSize(22px);
+    @include breakpoint(mobile-max) {
+        @include fontSize(12px);
+    }
+}
+
 .margin-top {
     margin-top: 118px;
     @include breakpoint(mobile-max) {

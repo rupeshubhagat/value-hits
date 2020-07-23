@@ -1,0 +1,107 @@
+.clients-section {
+    &__top {
+        padding: 85px 0px;
+        @include breakpoint(ipad-max) {
+            padding: 40px 0px;
+        }
+        @include breakpoint(mobile-max) {
+            padding: 20px 0px;
+        }
+        h2 {
+            font-family: $Poppins-Light;
+            font-weight: 300;
+            @include fontSize(64px);
+            color: $base-color;
+            text-align: center;
+            @include breakpoint(ipad-max) {
+                @include fontSize(32px);
+            }
+            @include breakpoint(mobile-max) {
+                @include fontSize(16px);
+            }
+        }
+    }
+    &__bottom {
+        .ups-clients-lists {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 25%;
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // border: 1px solid $base-color;
+                border-left: 1px solid $base-color;
+                border-bottom: 1px solid $base-color;
+                &:nth-child(4n+0) {
+                    @include breakpoint(desktop-min) {
+                        border-right: 1px solid $base-color;
+                    }
+                }
+                &:nth-child(-n+4) {
+                    @include breakpoint(desktop-min) {
+                        border-top: 1px solid $base-color;
+                    }
+                }
+                //ipad 
+                &:nth-child(3n+0) {
+                    @include breakpoint(ipad-min) {
+                        border-right: 1px solid $base-color;
+                    }
+                }
+                &:nth-child(-n+3) {
+                    @include breakpoint(ipad-min) {
+                        border-top: 1px solid $base-color;
+                    }
+                }
+                //mobile:
+                &:nth-child(2n+0) {
+                    @include breakpoint(mobile-max) {
+                        border-right: 1px solid $base-color;
+                    }
+                }
+                &:nth-child(-n+2) {
+                    @include breakpoint(mobile-max) {
+                        border-top: 1px solid $base-color;
+                    }
+                }
+                @include breakpoint(ipad-max) {
+                    width: 33.33%;
+                    height: 155px;
+                }
+                @include breakpoint(mobile-max) {
+                    width: 50%;
+                    height: 139px;
+                }
+                &:last-child {
+                    @include breakpoint(ipad-min) {
+                        border-right: 1px solid $base-color;
+                    }
+                    a {
+                        text-transform: uppercase;
+                        color: $base-color;
+                        &:hover {
+                            color: $text-white;
+                        }
+                    }
+                    &:hover {
+                        background-color: $links-hover-color;
+                        @include transition();
+                        a {
+                            text-transform: uppercase;
+                            color: $text-white;
+                        }
+                    }
+                }
+                img {
+                    width: 60%;
+                    filter: grayscale(1);
+                    &:hover {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+}

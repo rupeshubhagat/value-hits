@@ -7,6 +7,54 @@
             font-weight: bold;
             padding-bottom: 180px;
             @include fontSize(80px);
+            @include breakpoint(ipad-max) {
+                @include fontSize(48px);
+                padding-bottom: 100px;
+            }
+        }
+    }
+}
+
+.case-study {
+    &__top {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .case-study-blog {
+            // background-color: $base-bg-color;
+            @include background-color-rgba($base-bg-color, 0.5);
+            padding: 25px 32px 25px 33px;
+            border-radius: 16px;
+            width: 49%;
+            margin-bottom: 43px;
+            @include breakpoint(mobile-max) {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+            &__img-box {
+                margin-bottom: 41px;
+                img {
+                    width: 100%;
+                    border-radius: 16px;
+                }
+            }
+            .case-study-title {
+                text-align: left !important;
+                color: $base-color !important;
+                margin-bottom: 1rem;
+                @include breakpoint(mobile-max) {
+                    @include fontSize(16px);
+                }
+            }
+            .case-study-link {
+                a {
+                    color: $base-color;
+                    &:hover {
+                        color: $links-hover-color;
+                    }
+                }
+            }
         }
     }
 }
