@@ -146,14 +146,29 @@
     &__top {
         padding: 80px 0px 109px 0px;
         display: flex;
+        flex-wrap: wrap;
+        @include breakpoint(ipad-max) {
+            padding: 40px 0px 50px 0px;
+        }
         .certification__left {
             width: 50%;
             padding-right: 196px;
+            @include breakpoint(ipad-max) {
+                padding-right: 10px;
+            }
+            @include breakpoint(mobile-max) {
+                width: 100%;
+                padding-right: 0px;
+            }
             .certification-tittle {
                 text-align: left;
                 color: $base-color;
                 margin-bottom: 21px;
                 line-height: 81px;
+                @include breakpoint(ipad-max) {
+                    margin-bottom: 10px;
+                    line-height: 50px;
+                }
             }
             .certification-brief-desc {}
         }
@@ -162,6 +177,175 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @include breakpoint(mobile-max) {
+                width: 100%;
+            }
+            img {
+                @include breakpoint(ipad-max) {
+                    width: 80%;
+                }
+                @include breakpoint(mobile-max) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Call to action:
+.call-to-action {
+    .call-to-action-bg {
+        background-color: $call-to-action-bg;
+    }
+    &__top {
+        h2 {
+            text-align: center;
+            font-family: $Poppins-Light;
+            font-weight: 300;
+            @include fontSize(41px);
+            color: $text-white;
+            padding: 29px 0px 28px 0px;
+            @include breakpoint(ipad-max) {
+                @include fontSize(20px);
+            }
+            @include breakpoint(mobile-max) {
+                @include fontSize(12px);
+            }
+        }
+    }
+}
+
+// global-presence
+.global-presence {
+    .global-presence-bg {
+        background-image: linear-gradient(-90deg, #87ceeb, #7bd3f7);
+        padding: 110px 0px 123px 0px;
+        @include breakpoint(mobile-max) {
+            padding: 40px 0px 40px 0px;
+        }
+    }
+    &__top {
+        display: flex;
+        box-shadow: 0px 13px 40px #0000001A;
+        flex-wrap: wrap;
+        .global-presence-left {
+            width: 30%;
+            padding: 72px 60px 20px 54px;
+            background-color: $base-color;
+            @include breakpoint(ipad-max) {
+                padding: 24px;
+            }
+            @include breakpoint(mobile-max) {
+                width: 100%;
+            }
+            .global-presence-title {
+                font-family: $Poppins-Medium;
+                font-weight: 500;
+                color: $text-white;
+                @include fontSize(61px);
+                margin-bottom: 79px;
+                line-height: 81px;
+                @include breakpoint(desktop-max) {
+                    @include fontSize(40px);
+                    line-height: 54px;
+                }
+                @include breakpoint(ipad-max) {
+                    line-height: 45px;
+                    @include fontSize(30px);
+                }
+                @include breakpoint(mobile-max) {
+                    margin-bottom: 24px;
+                }
+            }
+            .global-brief-desc {
+                color: $text-white;
+            }
+        }
+        .global-presence-right {
+            width: 70%;
+            @include breakpoint(mobile-max) {
+                width: 100%;
+            }
+            .ups-lists-global {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: $text-white;
+                @include breakpoint(mobile-max) {
+                    background-color: transparent;
+                }
+                li {
+                    width: 50%;
+                    border-right: 1px solid $base-color;
+                    border-bottom: 1px solid $base-color;
+                    &:last-child {
+                        @include breakpoint(mobile-max) {
+                            margin-bottom: 0rem;
+                        }
+                    }
+                    @include breakpoint(mobile-max) {
+                        width: 100%;
+                        border: none;
+                        margin-bottom: 1rem;
+                    }
+                    &:nth-child(2n+0) {
+                        border-right: none;
+                    }
+                    &:nth-child(n+3) {
+                        border-bottom: none;
+                    }
+                    .global-prsence-address {
+                        padding: 72px 84px 20px 91px;
+                        background-color: $text-white;
+                        @include breakpoint(desktop-max) {
+                            padding: 72px 52px 20px 60px;
+                        }
+                        @include breakpoint(ipad-max) {
+                            padding: 12px;
+                        }
+                        &__title {
+                            font-family: $Poppins-Medium;
+                            font-weight: 500;
+                            color: $base-color;
+                            line-height: 81px;
+                            @include breakpoint(ipad-max) {
+                                line-height: 51px;
+                            }
+                        }
+                        &__address {
+                            margin-bottom: 22px;
+                            font-family: $Poppins-Light;
+                            font-weight: 300;
+                            color: $base-color;
+                        }
+                        &__phone {
+                            margin-bottom: 22px;
+                            font-family: $Poppins-Light;
+                            font-weight: 300;
+                            color: $base-color;
+                            display: flex;
+                            align-items: center;
+                            span {
+                                &:before {
+                                    color: $links-hover-color !important;
+                                }
+                            }
+                        }
+                        &__mail {
+                            margin-bottom: 22px;
+                            font-family: $Poppins-Light;
+                            font-weight: 300;
+                            color: $base-color;
+                            display: flex;
+                            align-items: center;
+                            span {
+                                &:before {
+                                    color: $links-hover-color !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
